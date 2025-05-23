@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-gujarati="કારકિર્દી ભલામણ">Career Recommendation</title>
+    <link rel="icon" type="image/jpeg" href="/static/favicon.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center">
+    <div class="fixed top-4 right-4 flex items-center space-x-2 z-10">
+        <span id="lang-en" class="text-sm">English</span>
+        <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="language-toggle" class="sr-only peer">
+            <div class="w-10 h-5 bg-white/20 rounded-full peer-checked:bg-white/50 transition-all"></div>
+            <div class="absolute left-1 top-1 w-3 h-3 bg-white rounded-full peer-checked:left-6 transition-all"></div>
+        </label>
+        <span id="lang-gu" class="text-sm">Gujarati</span>
+    </div>
+    <div class="relative w-full max-w-md mx-auto p-6 container-with-bg">
+        <h1 id="title" class="text-2xl font-semibold text-center mb-10 tracking-tight" data-gujarati="કારકિર્દી ભલામણ">Career Recommendation</h1>
+        <div class="relative bg-black border border-white/20 rounded-2xl p-6 shadow-lg shadow-white/5 hover:shadow-white/30 transition-shadow duration-300 opacity-0 animate-fade-in card-with-glow">
+            <form id="recommendation-form" class="space-y-5">
+                <div>
+                    <label for="skills" id="skills-label" class="block text-sm font-bold mb-2 transform transition-transform duration-500 translate-y-2 animate-slide-up" data-gujarati="કૌશલ્ય">Skills</label>
+                    <input type="text" id="skills" name="skills" class="w-full bg-black text-white border border-white/10 rounded-lg p-3 focus:outline-none focus:border-white/50 transition-all" placeholder="e.g., Python, Java" data-gujarati-placeholder="દા.ત., Python, Java" required>
+                </div>
+                <div>
+                    <label for="interests" id="interests-label" class="block text-sm font-bold mb-2 transform transition-transform duration-500 translate-y-2 animate-slide-up delay-100" data-gujarati="રુચિઓ">Interests</label>
+                    <input type="text" id="interests" name="interests" class="w-full bg-black text-white border border-white/10 rounded-lg p-3 focus:outline-none focus:border-white/50 transition-all" placeholder="e.g., AI Research" data-gujarati-placeholder="દા.ત., AI Research" required>
+                </div>
+                <div>
+                    <label for="experience" id="experience-label" class="block text-sm font-bold mb-2 transform transition-transform duration-500 translate-y-2 animate-slide-up delay-200" data-gujarati="અનુભવ સ્તર">Experience Level</label>
+                    <select id="experience" name="experience" class="w-full bg-black text-white border border-white/10 rounded-lg p-3 focus:outline-none focus:border-white/50 transition-all">
+                        <option value="beginner" data-gujarati="શરૂઆત">Beginner</option>
+                        <option value="intermediate" data-gujarati="મધ્યમ">Intermediate</option>
+                        <option value="advanced" data-gujarati="અદ્યતન">Advanced</option>
+                    </select>
+                </div>
+                <button type="submit" id="search-btn" class="w-full bg-white text-black font-bold py-3 rounded-lg hover:scale-105 active:scale-95 transition-transform duration-200" data-gujarati="શોધો">Search</button>
+            </form>
+            <div id="result" class="mt-6 text-center opacity-0 transition-opacity duration-300">
+                <p id="result-text" class="text-base" data-gujarati="👉 ભલામણ કાર્યક્ષમતા ટૂંક સમયમાં આવી રહી છે।">👉 Recommendation functionality coming soon.</p>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
